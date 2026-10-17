@@ -1,0 +1,7 @@
+Procédure de support AFTECH
+
+Tous les incidents sont enregistrés dans le projet Jira AFTECH-SUPPORT.
+
+Un incident classé P1 doit être pris en charge dans un délai de 15 minutes.
+
+Si un incident P1 n'est pas résolu après 30 minutes, il doit être escaladé au niveau supérieur.

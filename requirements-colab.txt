@@ -1,0 +1,8 @@
+transformers>=4.51.0 #this is what lets the computer understand text, generate answers, or translate languages.
+accelerate #intelligently distributes the work across your computer. It makes sure your graphics card (GPU) or your processor (CPU) gives its maximum so the AI responds as fast as possible, without crashing your machine.
+bitsandbytes #"compresses" the AI (this is called quantization) so it takes 4 to 8 times less space in the computer's memory, without becoming dumber.
+sentencepiece #takes your sentence, cuts it into small pieces (called "tokens"), and turns them into a sequence of numbers that "the Brain" (transformers) can then analyze.
+sentence-transformers #turns a piece of text (question or paragraph) into a list of numbers (an "embedding") so their meaning can be compared and the closest passages found.
+pypdf #opens a PDF file and extracts its text, page by page.
+faiss-cpu #vector search engine: stores embeddings in an index to very quickly find the passages closest to a question, even with many documents.
+psutil #reads system info (RAM, CPU) for the GPU benchmark; falls back automatically if absent.

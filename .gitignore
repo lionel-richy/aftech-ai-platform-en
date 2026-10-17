@@ -1,0 +1,31 @@
+# Secrets — never commit
+.env
+.env.local
+*.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Node / Next.js
+node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env*.local
+
+# macOS
+.DS_Store
+
+# Modal
+.modal/
+
+# Generated or large data — regenerable via the scripts, never source
+# code. data/samples/ (small text fixtures) stays tracked.
+data/indexes/
+data/documents/
+data/sample_pdf/
+data/document_store/
+results/

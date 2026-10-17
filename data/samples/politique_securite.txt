@@ -1,0 +1,7 @@
+Politique de sécurité AFTECH
+
+Les mots de passe doivent contenir au moins 14 caractères.
+
+La double authentification (2FA) est obligatoire pour tous les comptes de l'entreprise.
+
+Tout incident de sécurité doit être signalé immédiatement à l'adresse securite@aftech.example.

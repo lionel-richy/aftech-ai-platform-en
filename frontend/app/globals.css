@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/*
+ * Design system AFTECH — identité fixe (bleu nuit + cyan électrique +
+ * violet), volontairement indépendante de prefers-color-scheme : c'est une
+ * identité de marque, pas un thème clair/sombre interchangeable.
+ * Contrastes vérifiés manuellement pour rester au-dessus du seuil WCAG AA
+ * (4.5:1 pour le texte normal) sur les paires texte/fond utilisées.
+ */
+:root {
+  --bg: #070b14;
+  --surface: #0e1526;
+  --surface-elevated: #141d33;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --text-primary: #e8edf7;
+  --text-secondary: #9aa8c4;
+  --text-muted: #6b7a99;
+
+  --primary: #22d3ee;
+  --primary-strong: #67e8f9;
+  --accent: #a78bfa;
+
+  --success: #34d399;
+  --success-bg: rgba(52, 211, 153, 0.14);
+  --warning: #fb923c;
+  --warning-bg: rgba(251, 146, 60, 0.14);
+  --danger: #f87171;
+  --danger-bg: rgba(248, 113, 113, 0.14);
+  --info-bg: rgba(34, 211, 238, 0.12);
+
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Respecte prefers-reduced-motion : toute animation/transition est neutralisée. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible, clavier — jamais supprimé, juste restylé. */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-md);
+}

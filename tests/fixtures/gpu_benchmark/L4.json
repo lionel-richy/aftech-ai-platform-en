@@ -1,0 +1,66 @@
+{
+  "_fixture_de_test": "FAKE data for testing build_gpu_comparison.py — NOT a real GPU benchmark result.",
+  "configuration": {
+    "date_utc": "2026-10-06T00:00:00+00:00",
+    "gpu_demande": "L4",
+    "gpu_obtenu": "NVIDIA L4 (fixture)",
+    "vram_totale_octets": 24000000000,
+    "version_cuda": "12.4",
+    "version_pilote_nvidia": "550.00",
+    "version_torch": "2.9.0",
+    "version_transformers": "4.56.0",
+    "version_bitsandbytes": "0.46.0",
+    "version_sentence_transformers": "3.2.0",
+    "ram_systeme_go": 52.0,
+    "cpu": "Fixture CPU",
+    "taille_index_octets": 1445933,
+    "nombre_documents": 3,
+    "nombre_passages": 353,
+    "modele_embeddings": "BAAI/bge-m3",
+    "modele_llm": "Qwen/Qwen3-4B-Instruct-2507",
+    "seed": 42,
+    "repetitions": 3,
+    "questions": ["Fixture question 1", "Fixture question 2"]
+  },
+  "temps_installation_secondes": 40.0,
+  "temps_chargement": {
+    "index_secondes": 0.15,
+    "embedder_secondes": 7.0,
+    "llm_secondes": 20.0
+  },
+  "premier_appel_a_froid": {"erreurs": []},
+  "premier_token": {"disponible": true, "temps_premier_token_secondes": 0.5},
+  "memoire_gpu_avant_chargement_octets": 0,
+  "memoire_gpu_apres_chargement_octets": 4500000000,
+  "mesures_brutes": [
+    {
+      "question": "Fixture question 1",
+      "repetition": 1,
+      "status": "COMPLETE",
+      "answer": "Fixture answer.",
+      "tokens_entree": 500,
+      "tokens_generes": 80,
+      "tokens_par_seconde": 32.0,
+      "temps_recherche_secondes": 0.04,
+      "temps_generation_secondes": 2.5,
+      "temps_total_secondes": 2.54,
+      "memoire_gpu_avant_octets": 4500000000,
+      "memoire_gpu_pic_octets": 5200000000,
+      "utilisation_gpu_moyenne_pourcent": 70.0,
+      "puissance_moyenne_watts": 55.0,
+      "puissance_max_watts": 65.0
+    }
+  ],
+  "agregats": {
+    "global": {
+      "temps_recherche_secondes": {"moyenne": 0.04, "mediane": 0.04, "minimum": 0.03, "maximum": 0.05, "ecart_type": 0.01},
+      "temps_generation_secondes": {"moyenne": 2.5, "mediane": 2.5, "minimum": 2.3, "maximum": 2.7, "ecart_type": 0.2},
+      "temps_total_secondes": {"moyenne": 2.54, "mediane": 2.54, "minimum": 2.3, "maximum": 2.8, "ecart_type": 0.2},
+      "tokens_par_seconde": {"moyenne": 32.0, "mediane": 32.0, "minimum": 30.0, "maximum": 34.0, "ecart_type": 2.0}
+    },
+    "par_question": {}
+  },
+  "reponses": [],
+  "erreurs": [],
+  "avertissements": ["Test fixture: do not use as a real result."]
+}
